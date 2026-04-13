@@ -13,12 +13,12 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
             background: linear-gradient(135deg, #2563eb, #7c3aed);
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 42px;
             margin: 0;
         }
 
@@ -36,12 +36,13 @@
         h2 {
             border-bottom: 2px solid #334155;
             padding-bottom: 10px;
+            margin-top: 40px;
         }
 
         .card {
             background: #1e293b;
             padding: 20px;
-            margin: 15px 0;
+            margin: 20px 0;
             border-radius: 12px;
             transition: 0.3s;
         }
@@ -60,6 +61,21 @@
             font-size: 14px;
         }
 
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
         a {
             color: #38bdf8;
             text-decoration: none;
@@ -69,7 +85,7 @@
             text-align: center;
             padding: 20px;
             background: #020617;
-            margin-top: 30px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -78,56 +94,97 @@
 
 <header>
     <h1>Janvi Sharma</h1>
-    <p>B.Tech CSE | Data Engineering | AI & ML</p>
+    <p>B.Tech Computer Science | Data Engineering | AI & Machine Learning</p>
 </header>
 
 <div class="container">
 
     <h2>About Me</h2>
     <p>
-        Final-year Computer Science student specializing in Machine Learning, Data Engineering, and AI systems.
-        Experienced in building real-world AI models using transformers and optimization algorithms.
+        I am a final-year B.Tech Computer Science student with strong interest and hands-on experience in 
+        Machine Learning, Data Engineering, and Artificial Intelligence. I have worked on multiple real-world 
+        projects in healthcare and finance domains, focusing on building scalable, efficient, and explainable AI systems.
+        <br><br>
+        My work involves advanced deep learning architectures such as Vision Transformers, along with optimization 
+        techniques like bio-inspired algorithms. I am also experienced in working with cloud technologies like Azure 
+        and handling large-scale data pipelines using PySpark.
     </p>
 
     <h2>Projects</h2>
 
     <div class="card">
         <h3>Emotion Detection from Eye Images</h3>
-        <p>Built deep learning models (ResNet50, VGG16, MobileNetV2, DenseNet121). Achieved 76.81% accuracy.</p>
+        <p><b>Problem:</b> Traditional emotion detection relies on full-face images, which may not always be available or reliable.</p>
+        <p><b>Approach:</b> Developed multiple deep learning models including ResNet50, VGG16, MobileNetV2, and DenseNet121 using eye-region images. Applied preprocessing, augmentation, and class balancing techniques.</p>
+        <p><b>Result:</b> Achieved 76.81% accuracy. VGG16 demonstrated strong generalization performance.</p>
     </div>
 
     <div class="card">
-        <h3>CKD Classification (ViT-B16 + ChOA)</h3>
-        <p>Used Vision Transformer with 10-fold CV (98.87% accuracy) and Chimp Optimization Algorithm.</p>
+        <h3>Chronic Kidney Disease Classification (ViT-B16 + ChOA)</h3>
+        <p><b>Problem:</b> Early detection of CKD using CT scan images for better clinical decision-making.</p>
+        <p><b>Approach:</b> Implemented Vision Transformer (ViT-B16) with 10-fold cross-validation. Applied Chimp Optimization Algorithm for feature selection, reducing 768 features to 508.</p>
+        <p><b>Result:</b> Achieved 98.87% accuracy with improved efficiency and reduced computational cost.</p>
     </div>
 
     <div class="card">
-        <h3>Diabetic Retinopathy Detection</h3>
-        <p>Worked with ViT, Swin, Twins, CvT models. Achieved 97.8% accuracy.</p>
+        <h3>Diabetic Retinopathy Detection using Transformers</h3>
+        <p><b>Problem:</b> Automated detection of retinal diseases from medical images.</p>
+        <p><b>Approach:</b> Implemented multiple transformer architectures including ViT, Swin, Twins, and CvT-13.</p>
+        <p><b>Result:</b> CvT-13 achieved highest accuracy of 97.8% with superior precision and recall.</p>
+    </div>
+
+    <h2>Research Work</h2>
+
+    <div class="card">
+        <h3>Deep Vision – IEEE ICoEIT 2025</h3>
+        <p>
+            Published research focusing on deep learning-based vision systems for healthcare applications. 
+            Explores advanced architectures and performance evaluation techniques.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>REASON Framework – IEEE ICSFT 2026</h3>
+        <p>
+            Proposed an explainable AI framework combining multimodal data and advanced neural architectures 
+            for improved diagnostic performance.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Anti-Money Laundering Survey – IoT SIU 2025</h3>
+        <p>
+            Comprehensive survey on machine learning techniques used in AML systems, highlighting challenges, 
+            opportunities, and future directions.
+        </p>
     </div>
 
     <h2>Skills</h2>
+
     <div class="skills">
         <span>Python</span>
         <span>SQL</span>
         <span>PySpark</span>
         <span>Machine Learning</span>
+        <span>Deep Learning</span>
         <span>Vision Transformers</span>
         <span>Azure</span>
         <span>PyTorch</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
     </div>
 
     <h2>Achievements</h2>
     <ul>
-        <li>Finalist – Young Turks (Naukri)</li>
+        <li>Finalist – Young Turks by Naukri</li>
         <li>Top 5000 – Build With India Hackathon</li>
         <li>Finalist – Zero to One Hackathon</li>
     </ul>
 
     <h2>Contact</h2>
     <p>Email: janvisharma3125@gmail.com</p>
-    <p><a href="https://github.com/Janvi2508">GitHub</a></p>
-    <p><a href="https://linkedin.com/in/janvi-sharma-2246b1256">LinkedIn</a></p>
+    <p><a href="https://github.com/Janvi2508">GitHub Profile</a></p>
+    <p><a href="https://linkedin.com/in/janvi-sharma-2246b1256">LinkedIn Profile</a></p>
 
 </div>
 
