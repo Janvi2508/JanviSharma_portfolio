@@ -2,95 +2,138 @@
 <html>
 <head>
     <title>Janvi Sharma | Portfolio</title>
+
     <style>
         body {
-            font-family: Arial;
-            margin: 40px;
-            background-color: #f9f9f9;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
         }
-        h1, h2 {
-            color: #333;
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
         }
-        .section {
-            margin-bottom: 30px;
+
+        header h1 {
+            font-size: 40px;
+            margin: 0;
         }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        h2 {
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
+        }
+
         .card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: #1e293b;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #2563eb;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Janvi Sharma</h1>
-<p>B.Tech CSE | Data Engineering | AI & ML Enthusiast</p>
+<header>
+    <h1>Janvi Sharma</h1>
+    <p>B.Tech CSE | Data Engineering | AI & ML</p>
+</header>
 
-<div class="section">
-<h2>About Me</h2>
-<p>
-Final-year Computer Science student with experience in Machine Learning, Data Engineering, and AI systems.
-Worked on real-world projects in healthcare, finance, and automation using transformers and bio-inspired algorithms.
-</p>
+<div class="container">
+
+    <h2>About Me</h2>
+    <p>
+        Final-year Computer Science student specializing in Machine Learning, Data Engineering, and AI systems.
+        Experienced in building real-world AI models using transformers and optimization algorithms.
+    </p>
+
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Emotion Detection from Eye Images</h3>
+        <p>Built deep learning models (ResNet50, VGG16, MobileNetV2, DenseNet121). Achieved 76.81% accuracy.</p>
+    </div>
+
+    <div class="card">
+        <h3>CKD Classification (ViT-B16 + ChOA)</h3>
+        <p>Used Vision Transformer with 10-fold CV (98.87% accuracy) and Chimp Optimization Algorithm.</p>
+    </div>
+
+    <div class="card">
+        <h3>Diabetic Retinopathy Detection</h3>
+        <p>Worked with ViT, Swin, Twins, CvT models. Achieved 97.8% accuracy.</p>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>PySpark</span>
+        <span>Machine Learning</span>
+        <span>Vision Transformers</span>
+        <span>Azure</span>
+        <span>PyTorch</span>
+    </div>
+
+    <h2>Achievements</h2>
+    <ul>
+        <li>Finalist – Young Turks (Naukri)</li>
+        <li>Top 5000 – Build With India Hackathon</li>
+        <li>Finalist – Zero to One Hackathon</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: janvisharma3125@gmail.com</p>
+    <p><a href="https://github.com/Janvi2508">GitHub</a></p>
+    <p><a href="https://linkedin.com/in/janvi-sharma-2246b1256">LinkedIn</a></p>
+
 </div>
 
-<div class="section">
-<h2>Projects</h2>
-
-<div class="card">
-<b>Emotion Detection from Eye Images</b>
-<p>Built deep learning models (ResNet50, VGG16, MobileNetV2, DenseNet121) for emotion recognition. Achieved 76.81% accuracy.</p>
-</div>
-
-<div class="card">
-<b>CKD Classification (ViT-B16 + ChOA)</b>
-<p>CT scan classification using Vision Transformer with 10-fold CV (98.87% accuracy). Used Chimp Optimization Algorithm for feature selection.</p>
-</div>
-
-<div class="card">
-<b>Diabetic Retinopathy Detection</b>
-<p>Used ViT, Swin, Twins, CvT models. Achieved 97.8% accuracy with CvT-13.</p>
-</div>
-
-</div>
-
-<div class="section">
-<h2>Research Work</h2>
-<ul>
-<li>Deep Vision – IEEE ICoEIT 2025 (Published)</li>
-<li>REASON Framework – IEEE ICSFT 2026 (Accepted)</li>
-<li>AML Survey – IoT SIU 2025 (Published)</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Skills</h2>
-<ul>
-<li>Python, SQL, PySpark</li>
-<li>Machine Learning, Vision Transformers</li>
-<li>Azure Data Factory, Azure SQL</li>
-<li>PyTorch, Pandas, NumPy</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Achievements</h2>
-<ul>
-<li>Finalist – Young Turks (Naukri)</li>
-<li>Top 5000 – Build With India Hackathon</li>
-<li>Finalist – Zero to One Hackathon</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Contact</h2>
-<p>Email: janvisharma3125@gmail.com</p>
-<p>GitHub: https://github.com/Janvi2508</p>
-<p>LinkedIn: https://linkedin.com/in/janvi-sharma-2246b1256</p>
-</div>
+<footer>
+    <p>© 2026 Janvi Sharma</p>
+</footer>
 
 </body>
 </html>
