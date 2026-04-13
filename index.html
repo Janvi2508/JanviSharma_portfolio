@@ -9,22 +9,18 @@
             font-family: 'Segoe UI', sans-serif;
             background: #0f172a;
             color: #e2e8f0;
+            scroll-behavior: smooth;
         }
 
         header {
             text-align: center;
-            padding: 70px 20px;
+            padding: 80px 20px;
             background: linear-gradient(135deg, #2563eb, #7c3aed);
+            animation: fadeIn 1.5s ease-in;
         }
 
         header h1 {
             font-size: 42px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
         }
 
         .container {
@@ -36,7 +32,7 @@
         h2 {
             border-bottom: 2px solid #334155;
             padding-bottom: 10px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
         .card {
@@ -45,10 +41,13 @@
             margin: 20px 0;
             border-radius: 12px;
             transition: 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 1s forwards;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: scale(1.03);
             background: #334155;
         }
 
@@ -58,7 +57,6 @@
             padding: 8px 12px;
             border-radius: 8px;
             margin: 5px;
-            font-size: 14px;
         }
 
         .btn {
@@ -76,9 +74,19 @@
             background: #0ea5e9;
         }
 
-        a {
-            color: #38bdf8;
+        .resume-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 18px;
+            background: #22c55e;
+            color: white;
+            border-radius: 8px;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resume-btn:hover {
+            background: #16a34a;
         }
 
         footer {
@@ -87,6 +95,18 @@
             background: #020617;
             margin-top: 40px;
         }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -94,69 +114,60 @@
 
 <header>
     <h1>Janvi Sharma</h1>
-    <p>B.Tech Computer Science | Data Engineering | AI & Machine Learning</p>
+    <p>B.Tech CSE | Data Engineering | AI & Machine Learning</p>
+
+    <!-- ✅ YOUR RESUME LINK (FIXED) -->
+    <a href="https://drive.google.com/file/d/11L2KRGYy2CPfzYvEjKQw6AFWQOkuK27b/preview" class="resume-btn" target="_blank">
+        Download Resume
+    </a>
 </header>
 
 <div class="container">
 
     <h2>About Me</h2>
     <p>
-        I am a final-year B.Tech Computer Science student with strong interest and hands-on experience in 
-        Machine Learning, Data Engineering, and Artificial Intelligence. I have worked on multiple real-world 
-        projects in healthcare and finance domains, focusing on building scalable, efficient, and explainable AI systems.
-        <br><br>
-        My work involves advanced deep learning architectures such as Vision Transformers, along with optimization 
-        techniques like bio-inspired algorithms. I am also experienced in working with cloud technologies like Azure 
-        and handling large-scale data pipelines using PySpark.
+        Final-year Computer Science student specializing in Machine Learning, Data Engineering, and AI systems.
+        Experienced in building real-world AI models using transformers and optimization algorithms across healthcare domains.
     </p>
 
     <h2>Projects</h2>
 
     <div class="card">
         <h3>Emotion Detection from Eye Images</h3>
-        <p><b>Problem:</b> Traditional emotion detection relies on full-face images, which may not always be available or reliable.</p>
-        <p><b>Approach:</b> Developed multiple deep learning models including ResNet50, VGG16, MobileNetV2, and DenseNet121 using eye-region images. Applied preprocessing, augmentation, and class balancing techniques.</p>
-        <p><b>Result:</b> Achieved 76.81% accuracy. VGG16 demonstrated strong generalization performance.</p>
+        <p><b>Problem:</b> Detect emotions using limited facial features.</p>
+        <p><b>Approach:</b> Implemented ResNet50, VGG16, MobileNetV2, DenseNet121 with preprocessing and augmentation.</p>
+        <p><b>Result:</b> Achieved 76.81% accuracy.</p>
+        <a href="https://github.com/Janvi2508/EmoEye-Emotion-Detection/tree/main" class="btn" target="_blank">View Project</a>
     </div>
 
     <div class="card">
         <h3>Chronic Kidney Disease Classification (ViT-B16 + ChOA)</h3>
-        <p><b>Problem:</b> Early detection of CKD using CT scan images for better clinical decision-making.</p>
-        <p><b>Approach:</b> Implemented Vision Transformer (ViT-B16) with 10-fold cross-validation. Applied Chimp Optimization Algorithm for feature selection, reducing 768 features to 508.</p>
-        <p><b>Result:</b> Achieved 98.87% accuracy with improved efficiency and reduced computational cost.</p>
+        <p><b>Problem:</b> Early CKD detection using CT scans.</p>
+        <p><b>Approach:</b> Vision Transformer with Chimp Optimization Algorithm for feature selection.</p>
+        <p><b>Result:</b> Achieved 98.87% accuracy.</p>
+        <a href="https://github.com/Janvi2508/Chronic-kidney-disease-prediction-using-transformer-and-chimp-optimization-algorithm" class="btn" target="_blank">View Project</a>
     </div>
 
     <div class="card">
-        <h3>Diabetic Retinopathy Detection using Transformers</h3>
-        <p><b>Problem:</b> Automated detection of retinal diseases from medical images.</p>
-        <p><b>Approach:</b> Implemented multiple transformer architectures including ViT, Swin, Twins, and CvT-13.</p>
-        <p><b>Result:</b> CvT-13 achieved highest accuracy of 97.8% with superior precision and recall.</p>
+        <h3>Diabetic Retinopathy Detection</h3>
+        <p><b>Problem:</b> Detect retinal diseases from fundus images.</p>
+        <p><b>Approach:</b> Used ViT, Swin, Twins, CvT architectures.</p>
+        <p><b>Result:</b> Achieved 97.8% accuracy.</p>
+        <a href="https://github.com/Janvi2508/Diabetic_retinopathy_detection" class="btn" target="_blank">View Project</a>
     </div>
 
     <h2>Research Work</h2>
 
     <div class="card">
-        <h3>Deep Vision – IEEE ICoEIT 2025</h3>
-        <p>
-            Published research focusing on deep learning-based vision systems for healthcare applications. 
-            Explores advanced architectures and performance evaluation techniques.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>REASON Framework – IEEE ICSFT 2026</h3>
-        <p>
-            Proposed an explainable AI framework combining multimodal data and advanced neural architectures 
-            for improved diagnostic performance.
-        </p>
-    </div>
-
-    <div class="card">
         <h3>Anti-Money Laundering Survey – IoT SIU 2025</h3>
-        <p>
-            Comprehensive survey on machine learning techniques used in AML systems, highlighting challenges, 
-            opportunities, and future directions.
-        </p>
+        <p>Survey of ML techniques in AML systems with challenges and future scope.</p>
+        <a href="https://lnkd.in/gezR_iic" class="btn" target="_blank">View Paper</a>
+    </div>
+
+    <div class="card">
+        <h3>Deep Vision – IEEE ICoEIT 2025</h3>
+        <p>Research on deep learning-based vision systems for healthcare.</p>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qxVukbIAAAAJ&cstart=20&pagesize=80&citation_for_view=qxVukbIAAAAJ:_B80troHkn4C" class="btn" target="_blank">View Paper</a>
     </div>
 
     <h2>Skills</h2>
@@ -167,24 +178,14 @@
         <span>PySpark</span>
         <span>Machine Learning</span>
         <span>Deep Learning</span>
-        <span>Vision Transformers</span>
         <span>Azure</span>
         <span>PyTorch</span>
-        <span>Pandas</span>
-        <span>NumPy</span>
     </div>
-
-    <h2>Achievements</h2>
-    <ul>
-        <li>Finalist – Young Turks by Naukri</li>
-        <li>Top 5000 – Build With India Hackathon</li>
-        <li>Finalist – Zero to One Hackathon</li>
-    </ul>
 
     <h2>Contact</h2>
     <p>Email: janvisharma3125@gmail.com</p>
-    <p><a href="https://github.com/Janvi2508">GitHub Profile</a></p>
-    <p><a href="https://linkedin.com/in/janvi-sharma-2246b1256">LinkedIn Profile</a></p>
+    <p><a href="https://github.com/Janvi2508">GitHub</a></p>
+    <p><a href="https://linkedin.com/in/janvi-sharma-2246b1256">LinkedIn</a></p>
 
 </div>
 
